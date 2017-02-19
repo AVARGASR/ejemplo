@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel='stylesheet'>
+  
+  
+
+<body>
+
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div class="col s12 m6">
+        <h1 class="header center teal-text text-lighten-2">VIDEOTUTORES</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">¿Quieres ser parte de este novedoso proyecto?</h5>
+        </div>
+        <div class="row center">
+        <%= link_to "¡Quiero Unirme!", new_ayudante_path(@ayudante), class: "btn-large waves-effect waves-light teal lighten-2" %>
+        </div>
+          
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+   <div class="parallax"><%= image_tag("a3.jpg", :alt => "rss feed") %></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">stars</i></h2>
+            <h5 class="header center teal-text text-lighten-2">Nuestro Objetivo</h5>
+
+            <p class="light">Te enseñamos de una manera diferente, intuitiva y eficáz. El mundo actual requiere de personas capaces de trasmitir conocimiento, y nosotros estamos a la vanguardia, para que tengas la mejor experiencia estudiando con nosotros.</p>
+
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green lighten-3">Más información</a>
+        </div>
+
+          </div>
+        </div>
+
+
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">email</i></h2>
+            <h5 class="header center teal-text text-lighten-2">¿Necesitas Ayuda?</h5>
+
+            <p class="light">Envíanos un mensaje para que podamos resolver tus inquietudes, recuerda que estamos disponibles todos los días del año. Nuestros ayudantes se encargarán de proporcionarte la ayuda que necesitas </p> 
+
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green lighten-3">Contáctanos</a>
+        </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+ 
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Nuestro Legado</h5>
+          <p class="grey-text text-lighten-4">Equipo de desarrollo formado para crear un apoyo directo a estudiantes de nuestra universidad UTEM y para todos quienes tengan el deseo de aprender a través de videos con ayudantes capacitados.</p>
+
+
+        </div>
+        <div class="col l3 s12"></div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Lugares de interés</h5>
+          <ul>
+            <li><a class="white-text" href="http://www.utem.cl">UTEM.CL</a>
+            <li><a class="white-text" href="http://reko.utem.cl">REKO</a></li>
+            <li><a class="white-text" href="http://dirdoc.utem.cl">DIRDOC</a></li>
+            <li><a class="white-text" href="http://mi.utem.cl/">MI.UTEM</a></li>
+          </ul>
+        </div>
+        
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Desarrollado por: <a class="brown-text text-lighten-3" href="https://twitter.com/arieloubeckham">Ariel Vargas</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>$(document).ready(function(){
+    $('.parallax').parallax();
+});
+</script>
+
+  </body>
+</html>

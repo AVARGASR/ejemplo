@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>Tutores</title>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+
+
+
+
+<div class="navbar-fixed" >
+    <nav>
+      <div class=" nav-wrapper blue-grey lighten-4" >
+
+       
+        <ul class="center hide-on-med-and-down ">
+        <li><a href="https://facebook.com"><i class="  material-icons"><%= image_tag("fb3.png", :alt => "rss feed") %></i></a></li>
+        <li><a href="https://twitter.com"><i class="material-icons"><%= image_tag("tw1.png", :alt => "rss feed") %></i></a></li>
+        <li><a href="https://youtube.com"><i class="material-icons"><%= image_tag("you1.png", :alt => "rss feed") %></i></a></li>
+        
+      </ul>
+      </div>
+    </nav>
+
+  </div>
+
+
+
+
+
+
+
+<%= yield %>
+
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+
+
+  
+
+</body>
+</html>

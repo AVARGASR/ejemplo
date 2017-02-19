@@ -1,0 +1,1 @@
+json.partial! "ayudantes/ayudante", ayudante: @ayudante

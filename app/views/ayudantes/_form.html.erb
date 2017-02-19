@@ -1,0 +1,98 @@
+<%= form_for(@ayudante) do |f| %>
+  <% if @ayudante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ayudante.errors.count, "error") %> prohibited this ayudante from being saved:</h2>
+
+      <ul>
+      <% @ayudante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+<div class="row">
+  
+      <div class="row">
+        <div class="input-field col s5 cyan-text text-lighten-4">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.label :nombre %><br>
+          <%= f.text_field :nombre %>
+        </div>
+
+        <div class="input-field col s5 cyan-text text-lighten-4">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.label :apellido %><br>
+          <%= f.text_field :apellido %>
+        </div>
+      </div>
+  
+  </div>
+
+   <div class="row">
+  
+      <div class="row">
+        <div class="input-field col s5 cyan-text text-lighten-4">
+          <i class="material-icons prefix">account_circle</i>
+          <%= f.label :rut %><br>
+          <%= f.text_field :rut %>
+        </div>
+        <div class="input-field col s5 cyan-text text-lighten-4">
+          <i class="material-icons prefix">markunread_mailbox</i>
+          <%= f.label :email %><br>
+          <%= f.text_field :email %>
+        </div>
+      </div>
+  
+  </div>
+
+
+
+ 
+
+  <div class ="row">
+      <div class="row">
+
+           <div class="input-field col s5 cyan-text text-lighten-4">
+
+              <div class="control-group">
+                    <div class="controls">
+                     <i class="material-icons prefix">business </i>
+                     <%= f.select(:carrera, options_for_select([['Ingeniería Civil Electrónica/Mecánica','Ingeniería Civil Electrónica/Mecánica'],['Ingeniería Informática/Civil en Computación ', 'Ingeniería Informática/Civil en Computación'], ['Ingeniería Industrial/Civil Industrial', 'Ingeniería Industrial/Civil Industrial'],['Ingeniería Química/Química Industrial/Biotecnología','Ingeniería Química/Química Industrial/Biotecnología'], ['Ingeniería en Geomensura/Transporte y Tránsito','Ingeniería en Geomensura/Transporte y Tránsito'],['Otro','Otro']]), {  prompt: 'Carrera' }) %>
+                    </div>
+              </div>
+        </div>
+       
+       <div class="input-field col s5 cyan-text text-lighten-4">
+              <div class="control-group">
+                    <div class="controls">
+                     <i class="material-icons prefix">mode_edit</i>
+
+                     <%= f.select(:asignatura, options_for_select([['Algebra I', 'Algebra I'], ['Calculo I', 'Calculo I'],['Química General', 'Química General'], ['Física Clásica', 'Física Clásica'], ['Otro', 'Otro']]), {  prompt: 'Asignatura' }) %>
+                    </div>
+              </div>
+        </div>
+      </div>
+  </div>
+
+         <div class="row">
+           <div class = "button center col s5">
+              <%=f.submit "Guardar" ,class:"btn center-align"%>
+                  
+              
+            </div>
+           <div class = "button center col s5">
+           <%= link_to 'Volver', welcome_index_path, class:"btn center-align"%>
+           </div>
+          </div>
+  
+  
+
+
+
+<% end %>
+
+

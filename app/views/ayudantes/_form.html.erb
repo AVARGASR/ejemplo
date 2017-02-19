@@ -1,14 +1,19 @@
 <%= form_for(@ayudante) do |f| %>
   <% if @ayudante.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@ayudante.errors.count, "error") %> prohibited this ayudante from being saved:</h2>
 
-      <ul>
+    <div id="error_explanation">
+
+<ul id="dropdown2" class="dropdown-content">
+   
       <% @ayudante.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
+  <a class="btn center dropdown-button red" href="#!" data-activates="dropdown2">Error al guardar<i class="mdi-navigation-arrow-drop-down right "></i></a>
+
+
+
+     
   <% end %>
 
 
@@ -20,13 +25,13 @@
         <div class="input-field col s5 cyan-text text-lighten-4">
           <i class="material-icons prefix">account_circle</i>
           <%= f.label :nombre %><br>
-          <%= f.text_field :nombre %>
+          <%= f.text_field :nombre, :maxlength => 25 %>
         </div>
 
         <div class="input-field col s5 cyan-text text-lighten-4">
           <i class="material-icons prefix">account_circle</i>
           <%= f.label :apellido %><br>
-          <%= f.text_field :apellido %>
+          <%= f.text_field :apellido, :maxlength => 30 %>
         </div>
       </div>
   
@@ -38,7 +43,8 @@
         <div class="input-field col s5 cyan-text text-lighten-4">
           <i class="material-icons prefix">account_circle</i>
           <%= f.label :rut %><br>
-          <%= f.text_field :rut %>
+          <%= f.text_field :rut,:maxlength => 10 %>
+          
         </div>
         <div class="input-field col s5 cyan-text text-lighten-4">
           <i class="material-icons prefix">markunread_mailbox</i>
@@ -81,18 +87,19 @@
          <div class="row">
            <div class = "button center col s5">
               <%=f.submit "Guardar" ,class:"btn center-align"%>
-                  
-              
+
+
             </div>
            <div class = "button center col s5">
            <%= link_to 'Volver', welcome_index_path, class:"btn center-align"%>
            </div>
           </div>
   
-  
+  </div>
 
 
 
 <% end %>
+
 
 

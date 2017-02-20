@@ -1,7 +1,15 @@
 class Contact < MailForm::Base
-	attribute :name, :validate => true
-	attribute :email, :validate => true
-	attribute :message, :validate => true
+	
+
+	attribute :nombre
+	attribute :email
+	attribute :mensaje
+
+	validates_format_of :nombre, :with => /\A[a-zA-Z\s]+\z/ , allow_blank: true
+	validates :nombre , :presence => {:message => "Campo obligatorio"}
+	validates :email , :presence => {:message => "Campo obligatorio"}
+	validates :email, email_format: { message: "no es correcto" } , allow_blank: true
+	validates :mensaje , :presence => {:message => "Campo obligatorio"}
 
 	def headers 
 	{

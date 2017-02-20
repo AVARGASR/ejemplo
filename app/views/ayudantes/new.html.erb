@@ -28,6 +28,7 @@
 		  </div>
 
 
+
 <%= form_for(@ayudante) do |f| %>
 
 <% if @ayudante.errors.any? %>
@@ -53,8 +54,8 @@
         </div> 
         
         <div class="input-field col s5">
-          <i class="material-icons prefix">picture_in_picture</i>
-          <label for="lastname">Apellido</label>
+          <i class="material-icons prefix">account_circle</i>
+          <label class="text-lighten-4" for="lastname">Apellido</label>
           </br>
           <%=f.text_field :apellido,:maxlength => 25 %>
         </div>            
@@ -62,7 +63,7 @@
 
     <div class="row">
         <div class="input-field col s10 text-lighten-4">
-          <i class="material-icons prefix">account_circle</i>
+          <i class="material-icons prefix">picture_in_picture</i>
           <label for="name">Rut (Ej:123456789-0)</label>
           </br>
           <%=f.text_field :rut,:maxlength => 30%>
@@ -70,8 +71,8 @@
     </div>
     <div class="row">
         <div class="input-field col s10">
-          <i class="material-icons prefix">picture_in_picture</i>
-          <label for="lastname">email</label>
+          <i class="material-icons prefix">markunread_mailbox</i>
+          <label for="email">Email</label>
           </br>
           <%=f.text_field :email%>
         </div>            
@@ -90,7 +91,7 @@
                     </div>
               </div>
         	</div>
-       </div>
+      </div>
 
        <div class="row">
 
@@ -98,7 +99,7 @@
 
               <div class="control-group">
                     <div class="controls">
-                     <i class="material-icons prefix">mode_edit</i>
+                     <i class="material-icons prefix">spellcheck</i>
 
                      <%= f.select(:asignatura, options_for_select([['Algebra I', 'Algebra I'], ['Calculo I', 'Calculo I'],['Química General', 'Química General'], ['Física Clásica', 'Física Clásica'], ['Otro', 'Otro']]), {  prompt: 'Seleccione Asignatura a realizar' }) %>
                     </div>
@@ -120,12 +121,13 @@
            			<%= link_to 'Volver', welcome_index_path, class:"btn center-align"%>
            		</div>
     </div>
-    </div>
+    
 </div>
 
 
 
 <%end%>   
+
 </body>
 </html>
 

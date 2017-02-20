@@ -1,19 +1,18 @@
 <%= form_for(@ayudante) do |f| %>
   <% if @ayudante.errors.any? %>
 
-    <div id="error_explanation">
+    <div class="center"  id="error_explanation">
 
-<ul id="dropdown2" class="dropdown-content">
+<ul  id="dropdown2" class=" dropdown-content">
    
       <% @ayudante.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
-  <a class="btn center dropdown-button red" href="#!" data-activates="dropdown2">Error al guardar<i class="mdi-navigation-arrow-drop-down right "></i></a>
+  <a class="btn dropdown-button red"  data-activates="dropdown2">Error al guardar<i ></i></a>
+  </div>
+  
 
-
-
-     
   <% end %>
 
 
@@ -22,11 +21,15 @@
 <div class="row">
   
       <div class="row">
-        <div class="input-field col s5 cyan-text text-lighten-4">
+        <div class="col s5">
+        <div class="input-field  cyan-text text-lighten-4">
           <i class="material-icons prefix">account_circle</i>
-          <%= f.label :nombre %><br>
+          <%= f.label :nombre %></br>
           <%= f.text_field :nombre, :maxlength => 25 %>
         </div>
+        </div>
+        
+
 
         <div class="input-field col s5 cyan-text text-lighten-4">
           <i class="material-icons prefix">account_circle</i>
@@ -62,7 +65,7 @@
   <div class ="row">
       <div class="row">
 
-           <div class="input-field col s5 cyan-text text-lighten-4">
+           <div class=" input-field col s5 cyan-text text-lighten-4">
 
               <div class="control-group">
                     <div class="controls">
@@ -72,7 +75,7 @@
               </div>
         </div>
        
-       <div class="input-field col s5 cyan-text text-lighten-4">
+       <div class=" input-field col s5 cyan-text text-lighten-4">
               <div class="control-group">
                     <div class="controls">
                      <i class="material-icons prefix">mode_edit</i>
@@ -84,12 +87,10 @@
       </div>
   </div>
 
-         <div class=" center row">
+         <div class="row">
            <div class = "button center col s5">
               <%=f.submit "Guardar" ,class:"btn center-align"%>
-
-
-            </div>
+           </div>
            <div class = "button center col s5">
            <%= link_to 'Volver', welcome_index_path, class:"btn center-align"%>
            </div>

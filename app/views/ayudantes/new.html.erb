@@ -12,20 +12,22 @@
 
 <div  class="parallax-container">
 
+
          <div class="row ">
             	<div class= "center col s12 m4 l10">
             		<h3 class="header teal-text text-lighten-2">¡ Buscamos los mejores tutores !</h3>
             	</div>
-					<div class="row center "> 
-						<img src='<%= asset_path 'utem1.png' %>'class="responsive-img"  class="thumb"  alt="peluqueria"  width="110" height="110"/>
-					</div>
-						<img src='<%= asset_path 'a93.jpg' %>' class="parallax" class="responsive-img"/>
-						<div class=" row">
-							<div class= "center col s12 m4 l10">
-								<h5 class="header green-text text-darken-1">Ingresa tus datos para ponernos en contacto contigo.</h5>
-							</div>
-						</div>
-		  </div>
+					         <div class="row center"> 
+						            <img src='<%= asset_path 'utem1.png' %>'class="responsive-img"  class="thumb"  width="110" height="110"/>
+					         </div>
+						       <div class="parallax"><%= image_tag("a93.jpg") %></div>
+						            <div class=" row">
+							             <div class= "center col s12 m4 l10">
+								            <h5 class="header green-text text-darken-1">Ingresa tus datos para ponernos en contacto contigo.</h5>
+							             </div>
+						  </div>
+		     </div>
+      
 
 
 
@@ -34,8 +36,8 @@
 <% if @ayudante.errors.any? %>
 
     <div class="center"  id="error_explanation">
-		<ul  id="dropdown2" class=" dropdown-content">
-   			<% @ayudante.errors.full_messages.each do |message| %>
+		    <ul  id="dropdown2" class=" dropdown-content">
+   			    <% @ayudante.errors.full_messages.each do |message| %>
         		<li><%= message %></li>
       			<% end %>
       	</ul>
@@ -59,7 +61,23 @@
           </br>
           <%=f.text_field :apellido,:maxlength => 25 %>
         </div>            
-    </div>
+  </div>
+
+    <div class="row">
+
+           <div class=" input-field col s10  text-lighten-4">
+
+              <div class="control-group">
+                    <div class="controls">
+                    
+                     <i class="material-icons prefix">business </i>
+                     
+                     <%= f.select(:carrera, options_for_select([['Ingeniería Civil Electrónica/Mecánica','Ingeniería Civil Electrónica/Mecánica'],['Ingeniería Informática/Civil en Computación ', 'Ingeniería Informática/Civil en Computación'], ['Ingeniería Industrial/Civil Industrial', 'Ingeniería Industrial/Civil Industrial'],['Ingeniería Química/Química Industrial/Biotecnología','Ingeniería Química/Química Industrial/Biotecnología'], ['Ingeniería en Geomensura/Transporte y Tránsito','Ingeniería en Geomensura/Transporte y Tránsito'],['Otro','Otro']]), {  prompt: 'Seleccione Carrera' }) %>
+                    </div>
+              </div>
+          </div>
+      </div>
+
 
     <div class="row">
         <div class="input-field col s10 text-lighten-4">
@@ -78,20 +96,7 @@
         </div>            
     </div>
 
-     <div class="row">
-
-           <div class=" input-field col s10  text-lighten-4">
-
-              <div class="control-group">
-                    <div class="controls">
-                    
-                     <i class="material-icons prefix">business </i>
-                     
-                     <%= f.select(:carrera, options_for_select([['Ingeniería Civil Electrónica/Mecánica','Ingeniería Civil Electrónica/Mecánica'],['Ingeniería Informática/Civil en Computación ', 'Ingeniería Informática/Civil en Computación'], ['Ingeniería Industrial/Civil Industrial', 'Ingeniería Industrial/Civil Industrial'],['Ingeniería Química/Química Industrial/Biotecnología','Ingeniería Química/Química Industrial/Biotecnología'], ['Ingeniería en Geomensura/Transporte y Tránsito','Ingeniería en Geomensura/Transporte y Tránsito'],['Otro','Otro']]), {  prompt: 'Seleccione Carrera' }) %>
-                    </div>
-              </div>
-        	</div>
-      </div>
+     
 
        <div class="row">
 
@@ -121,12 +126,17 @@
            			<%= link_to 'Volver', welcome_index_path, class:"btn center-align"%>
            		</div>
     </div>
+
+  </div>
     
-</div>
+
 
 
 
 <%end%>   
+
+
+
 
 </body>
 </html>

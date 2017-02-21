@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'info/index'
   get 'contacts/new'
+  get 'users/sign_up'
   
   
 

@@ -1,8 +1,10 @@
-<div class="row ">
-<div class= "center col s12 m4 l10">
-<h1 class="header teal-text text-lighten-2">¡ Holanda</h1>
+<div class="row">
+<h4 class="header blue-text text-darken-2">Contactanos</h4>
+</div>
 
-<div class= "row">
+<div class="parallax" class="responsive-img"><%= image_tag("a13.jpg") %></div>
+
+
 	<%= form_for @contact do |f| %>
 
 	<% if @contact.errors.any? %>
@@ -18,37 +20,33 @@
 
     <% end %>
 
+    <div class="row">
+        <div class="center input-field col s12 m6 blue-text text-darken-2">
+          <%= f.label :nombre %><br />
+          <%= f.text_field :nombre,:maxlength => 30%>
+        </div> 
+    </div>
+
+    <div class="row">
+        <div class="center input-field col s12 m6 blue-text text-darken-2">
+          <%= f.label :email %><br />
+          <%=f.text_field :email,:maxlength => 30%>
+        </div> 
+    </div>
 
 
-		<div class="row">
-              	<div class="input-field col s6 cyan-text text-lighten-4">         
-                  <label for="name">Nombre</label>
-                  </br>
-                  <%=f.text_field :nombre,:maxlength => 30%>
-        		</div>
-        </div>
-
-		<br>
-
-		<div class="row">
-              	<div class="input-field col s6 cyan-text text-lighten-4">         
-                  <label for="name">Correo</label>
-                  </br>
-                  <%=f.text_field :email,:maxlength => 30%>
-        		</div>
-        </div>
 
 		<br>
 		<br>
 
 		<div class="row">
-              	<div class="input-field col s7 cyan-text text-lighten-4">         
+              	<div class="input-field col s7 blue-text text-darken-2">         
                   <label for="name">Mensaje</label>
                   </br></br>
                   <%=f.text_area :mensaje %>
         		</div>
         </div>
-</div>
+
 
 		<br>
 

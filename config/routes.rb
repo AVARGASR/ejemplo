@@ -3,11 +3,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'info/index'
   get 'contacts/new'
-  get 'users/sign_in'
   
-  
-
-
   resources :ayudantes
   resources :contacts, only: [:new , :create]
   # The priority is based upon order of creation: first created -> highest priority.

@@ -6,6 +6,7 @@ gem 'jquery-turbolinks'
 
 gem 'validates_email_format_of'
 gem 'rut_validation'
+gem 'devise'
 
 gem 'cowsay'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

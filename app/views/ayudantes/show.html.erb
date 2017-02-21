@@ -1,34 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Rut:</strong>
-  <%= @ayudante.rut %>
-</p>
+<h1>Listado de ayudantes</h1>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @ayudante.nombre %>
-</p>
+<table>
+  <thead>
+    <tr>
+      <th>Rut</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Asignatura</th>
+      <th>Carrera</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Apellido:</strong>
-  <%= @ayudante.apellido %>
-</p>
+  <tbody>
+    <% @ayudantes.each do |ayudante| %>
+      <tr>
+        <td><%= ayudante.rut %></td>
+        <td><%= ayudante.nombre %></td>
+        <td><%= ayudante.apellido %></td>
+        <td><%= ayudante.asignatura %></td>
+        <td><%= ayudante.carrera %></td>
+        <td><%= ayudante.email %></td>
+        <td><%= link_to 'Destroy', ayudante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<p>
-  <strong>Asignatura:</strong>
-  <%= @ayudante.asignatura %>
-</p>
+<br>
 
-<p>
-  <strong>Carrera:</strong>
-  <%= @ayudante.carrera %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @ayudante.email %>
-</p>
-
-<%= link_to 'Edit', edit_ayudante_path(@ayudante) %> |
-<%= link_to 'Back', ayudantes_path %>
+<%= link_to 'New Ayudante', new_ayudante_path %>

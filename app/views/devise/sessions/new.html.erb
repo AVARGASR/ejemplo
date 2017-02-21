@@ -1,0 +1,45 @@
+
+<div class="row">
+<h4 class="header blue-text text-darken-2">Bienvenido administrador</h4>
+</div>
+
+<div class="parallax" class="responsive-img"><%= image_tag("a13.jpg") %></div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+
+
+    <div class="row">
+        <div class="center input-field col s12 m6 blue-text text-darken-2">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div> 
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12 m6 blue-text text-darken-2">
+           <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div> 
+    </div>
+
+  
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+    <div class="row">
+           <div class = "button center col s5">
+                <%=f.submit "Ingresar" ,class:"btn center-align"%>
+           </div>
+    </div>
+
+
+<% end %>
+</div>
+
+

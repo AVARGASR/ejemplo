@@ -1,5 +1,7 @@
 class Ayudante < ActiveRecord::Base 
 
+	
+
 	validates_format_of :nombre, :with => /\A[a-zA-Z\s]+\z/ , allow_blank: true
 	validates :nombre , :presence => {:message => "Campo obligatorio"}
 	validates_format_of :apellido, :with => /\A[a-zA-Z\s]+\z/ , allow_blank: true
